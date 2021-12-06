@@ -1,70 +1,75 @@
 <template>
   <div>
-    <tr>
-      <td class="description">Короткий джобкод :</td>
-      <td class="data">{{ getPropertyData("short_jobcode") }}</td>
-      <td class="description">ФИО:</td>
-      <td class="data">{{ getPropertyData("fio") }}</td>
-      <td class="description">Тип сотрудника:</td>
-      <td class="data">{{ getPropertyData("sf_type_of_employee") }}</td>
-    </tr>
-    <tr>
-      <td class="description">Код ВСП:</td>
-      <td class="data">{{ getPropertyData("vspcode") }}</td>
-      <td class="description">Джобкод:</td>
-      <td class="data">{{ getPropertyData("jobcode") }}</td>
-      <td class="description">Дата создания:</td>
-      <td class="data">{{ getPropertyData("created_at") }}</td>
-    </tr>
-    <tr>
-      <td class="description">TБ:</td>
-      <td class="data">{{ getPropertyData("tb_name") }}</td>
-      <td class="description">Табельный номер:</td>
-      <td class="data">{{ getPropertyData("sapid") }}</td>
-      <td class="description">Дата обновления:</td>
-      <td class="data">{{ getPropertyData("updated_at") }}</td>
-    </tr>
-    <tr>
-      <td class="description">Код TБ:</td>
-      <td class="data">{{ getPropertyData("tb") }}</td>
-      <td class="description">Логин:</td>
-      <td class="data">{{ getPropertyData("login") }}</td>
-      <td class="description">Дата иницилизации:</td>
-      <td class="data">{{ getPropertyData("init_time") }}</td>
-    </tr>
-    <tr>
-      <td class="description">ГОСБ:</td>
-      <td class="data">{{ getPropertyData("gosb") }}</td>
-      <td class="description">Email:</td>
-      <td class="data">{{ getPropertyData("email") }}</td>
-      <td class="description">Дата найма:</td>
-      <td class="data">{{ getPropertyData("") }}</td>
-    </tr>
-    <tr>
-      <td class="description">Организация:</td>
-      <td class="data">{{ getPropertyData("organization") }}</td>
-      <td class="description">Дата рождения:</td>
-      <td class="data">{{ getPropertyData("birthDate") }}</td>
-      <td class="description">Дата увольнения:</td>
-      <td class="data">{{ getPropertyData("hire_date") }}</td>
-    </tr>
-    <tr>
-      <td class="description">Должность:</td>
-      <td class="data">{{ getPropertyData("synonym") }}</td>
-      <td class="description"></td>
-      <td class="data" >{{ }}</td>
-      <td class="description">Доступы</td>
-      <td>
-          <span class="label" :class="{'label-success': Boolean(getPropertyData(`rb`)), 'label-danger': !Boolean(getPropertyData(`rb`))}">РБ</span>
-          <span class="label" :class="{'label-success': Boolean(getPropertyData(`sbs`)), 'label-danger': !Boolean(getPropertyData(`sbs`))}">ВШС</span>
-          <span class="label" :class="{'label-success': Boolean(getPropertyData(`atd`)), 'label-danger': !Boolean(getPropertyData(`atd`))}">АТД</span>
-      </td>
-    </tr>
+    <div>
+      <tr>
+        <td class="description">Короткий джобкод :</td>
+        <td class="data">{{ getPropertyData("short_jobcode") }}</td>
+        <td class="description">ФИО:</td>
+        <td class="data">{{ getPropertyData("fio") }}</td>
+        <td class="description">Тип сотрудника:</td>
+        <td class="data">{{ getPropertyData("sf_type_of_employee") }}</td>
+      </tr>
+      <tr>
+        <td class="description">Код ВСП:</td>
+        <td class="data">{{ getPropertyData("vspcode") }}</td>
+        <td class="description">Джобкод:</td>
+        <td class="data">{{ getPropertyData("jobcode") }}</td>
+        <td class="description">Дата создания:</td>
+        <td class="data">{{ getPropertyData("created_at") }}</td>
+      </tr>
+      <tr>
+        <td class="description">TБ:</td>
+        <td class="data">{{ getPropertyData("tb_name") }}</td>
+        <td class="description">Табельный номер:</td>
+        <td class="data">{{ getPropertyData("sapid") }}</td>
+        <td class="description">Дата обновления:</td>
+        <td class="data">{{ getPropertyData("updated_at") }}</td>
+      </tr>
+      <tr>
+        <td class="description">Код TБ:</td>
+        <td class="data">{{ getPropertyData("tb") }}</td>
+        <td class="description">Логин:</td>
+        <td class="data">{{ getPropertyData("login") }}</td>
+        <td class="description">Дата иницилизации:</td>
+        <td class="data">{{ getPropertyData("init_time") }}</td>
+      </tr>
+      <tr>
+        <td class="description">ГОСБ:</td>
+        <td class="data">{{ getPropertyData("gosb") }}</td>
+        <td class="description">Email:</td>
+        <td class="data">{{ getPropertyData("email") }}</td>
+        <td class="description">Дата найма:</td>
+        <td class="data">{{ getPropertyData("") }}</td>
+      </tr>
+      <tr>
+        <td class="description">Организация:</td>
+        <td class="data">{{ getPropertyData("organization") }}</td>
+        <td class="description">Дата рождения:</td>
+        <td class="data">{{ getPropertyData("birthDate") }}</td>
+        <td class="description">Дата увольнения:</td>
+        <td class="data">{{ getPropertyData("hire_date") }}</td>
+      </tr>
+      <tr>
+        <td class="description">Должность:</td>
+        <td class="data">{{ getPropertyData("synonym") }}</td>
+        <td class="description"></td>
+        <td class="data" >{{ }}</td>
+        <td class="description">Доступы</td>
+        <td>
+            <span class="label" :class="{'label-success': Boolean(getPropertyData(`rb`)), 'label-danger': !Boolean(getPropertyData(`rb`))}">РБ</span>
+            <span class="label" :class="{'label-success': Boolean(getPropertyData(`sbs`)), 'label-danger': !Boolean(getPropertyData(`sbs`))}">ВШС</span>
+            <span class="label" :class="{'label-success': Boolean(getPropertyData(`atd`)), 'label-danger': !Boolean(getPropertyData(`atd`))}">АТД</span>
+        </td>
+      </tr>
+    </div>
+    <user-trajectories />
   </div>
 </template>
 
 
 <script>
+import UserTrajectories from "./UserTrajectories.vue"
+
 export default {
   data() {
     return {
@@ -135,6 +140,9 @@ export default {
     },
   },
   computed: {},
+  components: {
+    "user-trajectories": UserTrajectories
+  }
 };
 </script>
 
